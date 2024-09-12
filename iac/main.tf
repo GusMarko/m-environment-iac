@@ -76,12 +76,12 @@ data "aws_iam_policy_document" "policy-document-marko" {
 
 # DYNAMODB FOR STORING API RESPONSES
 resource "aws_dynamodb_table" "dynamodb-marko" {
-  name           = "GameScores"
-  billing_mode   = "PROVISIONED"
+  name           = "dynamodb-marko"
+  billing_mode   = "PAY_PER_REQUEST"
   read_capacity  = 1
   write_capacity = 1
   hash_key       = "UserId"
-  range_key      = "GameTitle"
+
 
   attribute {
     name = "UserId"
