@@ -1,6 +1,6 @@
 # S3 BUCKET FOR PARSING DATA
 resource "aws_s3_bucket" "s3-marko" {
-  bucket = "s3-API-data-marko"
+  bucket = "s3-api-data-marko"
 
 }
 # S3 POLICY
