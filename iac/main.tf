@@ -19,7 +19,7 @@ data "aws_iam_policy_document" "allow_access-marko" {
     actions = [
       "s3:GetObject",
       "s3:ListBucket",
-      "s3:PutObjects"
+      "s3:PutObject"
     ]
 
     resources = [
