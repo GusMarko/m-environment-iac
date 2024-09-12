@@ -78,8 +78,6 @@ data "aws_iam_policy_document" "policy-document-marko" {
 resource "aws_dynamodb_table" "dynamodb-marko" {
   name           = "dynamodb-marko"
   billing_mode   = "PAY_PER_REQUEST"
-  read_capacity  = 1
-  write_capacity = 1
   hash_key       = "UserId"
 
 
