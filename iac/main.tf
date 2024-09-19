@@ -78,11 +78,13 @@ data "aws_iam_policy_document" "policy-document-marko" {
 resource "aws_dynamodb_table" "dynamodb-marko" {
   name           = "dynamodb-marko"
   billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "UserId"
+  hash_key       = "Artist"
+  stream_enabled = true
+  stream_view_type = "NEW_AND_OLD_IMAGES"
 
 
   attribute {
-    name = "UserId"
+    name = "Artist"
     type = "S"
   }
 }
