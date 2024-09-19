@@ -36,4 +36,4 @@ jobs:
         run: |
           cd iac
           terraform init 
-          terraform destroy -auto-approve
+          terraform apply -auto-approve
